@@ -1,12 +1,12 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <stdio.h>
 /* more headers goes there */
 
 /**
-* main - a function to check if the numbers are negative or positive
+* main - it's a function checks if the number -0 or 0 or+0
 *
-* Return: allways0.
+* Return: Allways 0.
 */
 int main(void)
 {
@@ -14,17 +14,18 @@ int main(void)
 
 			srand(time(0));
 				n = rand() - RAND_MAX / 2;
-if (n > 0)
-{
-printf("The number is positive");
-}
-else if (n == 0)
-{
-	printf("The number is 0");
-}
-else
-{
-	printf("The number is negative");
-}
+					/* your code goes there */
+				if (n > 0)
+				{
+					printf("%d is %s\n", n, "positive");
+				}
+				else if (n == 0)
+				{
+					printf("%d is %s\n", n, "zero");
+				}
+				else
+				{
+					printf("%d is %s\n", n, "negative");
+				}
 					return (0);
 }
