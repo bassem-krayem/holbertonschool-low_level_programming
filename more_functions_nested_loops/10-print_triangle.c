@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * print_triangle - prints a triangle in the terminal
  * @size: the size of the triangle,
@@ -9,6 +10,7 @@
 void print_triangle(int size)
 {
 	int l, c;
+
 	if (size <= 0)
 	{
 		_putchar('\n');
