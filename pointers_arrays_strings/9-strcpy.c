@@ -2,7 +2,7 @@
 
 /**
  * *_strcpy - copy a string
- * @deste: the destination.
+ * @dest: the destination.
  * @src: the sorce of the copy.
  * Return: Pointer to `dest`
  */
