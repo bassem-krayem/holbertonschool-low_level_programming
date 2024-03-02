@@ -9,16 +9,16 @@ void puts_half(char *str)
 {
 	int length;
 	int half_lingth;
-	int i;
+	int total;
 
 	for (length = 0; str[length] != '\0'; length++)
 	{
 	}
+	total = length;
+	half_lingth = total / 2;
 
-	half_lingth = length / 2;
-
-	for (i = half_lingth; i < length; i++)
+	for (half_lingth = total / 2; half_lingth <= total; half_lingth++)
 	{
-		_putchar(str[i]);
+		_putchar(str[half_lingth]);
 	}
 }
