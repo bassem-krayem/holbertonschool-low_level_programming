@@ -20,7 +20,7 @@ char *_strpbrk(char *s, char *accept)
 		while (*p_accept != '\0')
 		{
 			if (*s == *p_accept)
-				return s;
+				return (s);
 			p_accept++;
 		}
 		s++;
