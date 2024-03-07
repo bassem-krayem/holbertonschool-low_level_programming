@@ -1,25 +1,28 @@
 #include "main.h"
+
 /**
- * find_root - a function that prints
- *  a string, followed by a new line.
- * @n: The number
- * @i: root by i
- * Return: int value
+ * find_root - Finds the natural square root of a number recursively.
+ * @n: The number to find the square root of.
+ * @i: The current candidate root to check.
+ *
+ * Return: The natural square root of 'n', or -1 if 'n' does not have
+ * a natural square root.
  */
-int findroot(int n, int i)
+int find_root(int n, int i)
 {
 	if (i * i == n)
 		return (i);
-	if (i * i <= n)
-		return (findroot(n, i + 1));
-	else
-		return (-1);
+	if (i * i < n)
+		return (find_root(n, i + 1));
+	return (-1);
 }
+
 /**
- * _sqrt_recursion -a function that prints
- *  a string, followed by a new line.
- * @n: The number
- * Return: int value
+ * _sqrt_recursion - Returns the natural square root of a number.
+ * @n: The number to find the square root of.
+ *
+ * Return: The natural square root of 'n', or -1 if 'n' does not have
+ * a natural square root.
  */
 int _sqrt_recursion(int n)
 {
@@ -27,5 +30,5 @@ int _sqrt_recursion(int n)
 		return (-1);
 	if (n == 0 || n == 1)
 		return (n);
-	return (findroot(n, 2));
+	return (find_root(n, 1));
 }
