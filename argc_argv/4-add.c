@@ -1,40 +1,53 @@
-#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
-
 /**
- * main - add two positive numbers
- * @argc: the number of arguments.
- * @argv: the array containing the strings.
- * Return: 0 on success, 1 on error.
+ *checknumbers - check for numbers
+ * @argc : size of the array
+ * @argv : elements of the array
+ * Return: 0 or 1
  */
-
-int main(int argc, char *argv[])
+int checknumbers(int argc, char **argv)
 {
-	int i, num, result;
-
-	if (argc == 1)
-	{
-		printf("0\n");
-		return 0;
-	}
+	int i;
+	int j;
 
 	for (i = 1; i < argc; i++)
 	{
-		char *ptr;
-		for (ptr = argv[i]; *ptr != '\0'; ptr++)
+		j = 0;
+		while (argv[i][j] != '\0')
 		{
-			if (!isdigit(*ptr))
+			if ((argv[i][j] < 47) || (argv[i][j] > 58))
 			{
-				printf("Error\n");
-				return 1;
+				return (0);
 			}
-			num = atoi(argv[i]);
-			result += num;
+			j++;
 		}
 	}
+	return (1);
+}
+/**
+ * main - Entry point
+ * @argc : size of the array
+ * @argv : elements of the array
+ * Return: 0 or 1
+ */
+int main(int argc, char **argv)
+{
+	int i;
+	int sum = 0;
 
-	printf("%d\n", result);
-	return 0;
+	if (checknumbers(argc, argv) == 0)
+	{
+		printf("Error\n");
+		return (1);
+	}
+	else
+	{
+		for (i = 1; i < argc; i++)
+		{
+			sum = sum + atoi(argv[i]);
+		}
+		printf("%d\n", sum);
+		return (0);
+	}
 }
