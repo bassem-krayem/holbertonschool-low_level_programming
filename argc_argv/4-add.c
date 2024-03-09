@@ -12,17 +12,13 @@
 
 int main(int argc, char *argv[])
 {
-	int i, num1, num2, result;
+	int i, num, result;
 
-	if (argc < 3)
+	if (argc == 1)
 	{
 		printf("0\n");
 		return 0;
 	}
-
-	num1 = atoi(argv[1]);
-	num2 = atoi(argv[2]);
-	result = num1 + num2;
 
 	for (i = 1; i < argc; i++)
 	{
@@ -34,6 +30,8 @@ int main(int argc, char *argv[])
 				printf("Error\n");
 				return 1;
 			}
+			num = atoi(argv[i]);
+			result += num;
 		}
 	}
 
