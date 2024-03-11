@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * strdup - return a string
+ * *_strdup - return a string
  * @str: the str.
  * Return: the s.
  */
