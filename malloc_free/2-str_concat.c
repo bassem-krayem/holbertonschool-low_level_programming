@@ -53,5 +53,5 @@ char *str_concat(char *s1, char *s2)
 
 	concatenated[length1 + length2] = '\0';
 
-	return concatenated;
+	return (concatenated);
 }
