@@ -30,7 +30,8 @@ int *array_range(int min, int max)
 	/* Fill the array with values from min to max */
 	for (i = 0; i < size; i++)
 	{
-		array[i] = min++; /* Assign current value of min to array element and increment min */
+		/* Assign current value of min to array element and increment min */
+		array[i] = min++;
 	}
 
 	/* Return pointer to the newly created array */
