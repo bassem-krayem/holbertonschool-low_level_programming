@@ -16,16 +16,13 @@ char *leet(char *str)
 	while (*s)
 	{
 		i = 0;
-		j = 0;
-
-		while (letters[j])
+		while (letters[i])
 		{
-			if (*s == letters[j])
+			if (*s == letters[i])
 			{
 				*s = leet_code[i];
 				break;
 			}
-			j++;
 			i++;
 		}
 		s++;
