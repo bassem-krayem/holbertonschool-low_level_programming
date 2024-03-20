@@ -8,20 +8,21 @@
  */
 char *leet(char *s)
 {
-	char *r = s;
-	char a[] = {'a', 'e', 'o', 't', 'l'};
-	char n[] = {'4', '3', '0', '7', '1'};
+	char *r = s;						  // Pointer to the original string
+	char a[] = {'a', 'e', 'o', 't', 'l'}; // Array of characters to replace
+	char n[] = {'4', '3', '0', '7', '1'}; // Array of replacement characters
 	int i;
 
 	while (*s)
 	{
 		for (i = 0; i < 5; i++)
 		{
+			// Check if the current character matches any of the characters to replace
 			if (*s == a[i] || *s == a[i] - 32)
-				*s = n[i];
+				*s = n[i]; // Replace the character with the corresponding replacement character
 		}
-		s++;
+		s++; // Move to the next character in the string
 	}
 
-	return (r);
+	return (r); // Return a pointer to the modified string
 }
