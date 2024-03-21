@@ -1,39 +1,44 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include "3-calc.h"
+/**
+ * main - entry point for function
+ * @argc: arg counter, number of args
+ * @argv: array of pointers to args
+ *
+ * Return: 0 on success, 98 on failure
+ */
 
 int main(int argc, char *argv[])
 {
-	int num1, num2, result;
-	int (*f)(int, int);
+	int num1, num2, sum;
 	char operator;
+	int (*f)(int, int);
 
 	if (argc != 4)
 	{
 		printf("Error\n");
-		return (98);
+		exit(98);
 	}
 
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
 
 	f = get_op_func(argv[2]);
-
 	if (f == NULL)
 	{
 		printf("Error\n");
-		return (99);
+		exit(99);
 	}
 
 	operator= * argv[2];
-
 	if ((operator== '/' || operator== '%') && num2 == 0)
 	{
 		printf("Error\n");
-		return 100;
+		exit(100);
 	}
-	result = f(num1, num2);
-	printf("%d\n", result);
+
+	sum = f(num1, num2);
+	printf("%d\n", sum);
 	return (0);
 }
