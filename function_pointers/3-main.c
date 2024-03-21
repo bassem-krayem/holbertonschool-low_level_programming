@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 		return (99);
 	}
 
-	operator== * argv[2];
+	operator= * argv[2];
 
 	if ((operator== '/' || operator== '%') && num2 == 0)
 	{
